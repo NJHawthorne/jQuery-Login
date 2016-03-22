@@ -1,0 +1,28 @@
+{
+  "name": "login-jquery",
+  "version": "1.0.0",
+  "description": "Testing a layout for logging in to some site.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NJHawthorne/jQuery-Login.git"
+  },
+  "keywords": [
+    "jquery",
+    "javascript",
+    "login",
+    "struggles"
+  ],
+  "author": "Nate Hawthorne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NJHawthorne/jQuery-Login/issues"
+  },
+  "homepage": "https://github.com/NJHawthorne/jQuery-Login#readme",
+  "dependencies": {
+    "jquery": "^2.2.2"
+  }
+}
