@@ -1,28 +1,31 @@
 .top-half {
   background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-login/master/bg-login-top.png);
   background-size: fill;
-  padding-top: 13em; }
+  height: 20em; }
   .top-half div {
     width: 25%;
+    padding-top: 14em;
     margin: 0 auto; }
 
 .bottom-half {
   background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-login/master/bg-login.png);
   background-size: fill;
-  padding-bottom: 13em; }
-  .bottom-half form {
+  height: 20em; }
+  .bottom-half div {
     width: 30.5%;
     margin: 0 auto;
     color: red; }
-    .bottom-half form div {
+    .bottom-half div div {
+      width: 15em;
       padding-top: 0.5em;
-      margin-left: 6.25em; }
-    .bottom-half form input {
+      margin-left: 5.25em; }
+    .bottom-half div input {
       border-radius: 0.5em;
-      padding: 1em 4em;
-      margin-top: 1em;
-      margin-left: 9em; }
-    .bottom-half form button {
+      padding: 0.5em 2em;
+      margin-top: 0.5em;
+      margin-left: 5em;
+      outline: none; }
+    .bottom-half div button {
       margin-top: 1em;
       margin-left: 20em;
       padding: 0.5em;
@@ -31,6 +34,9 @@
       color: white;
       font-weight: bold;
       font-size: 0.8em;
-      border-color: lime; }
+      border-color: lime;
+      transition: background-color 0.5s; }
+    .bottom-half div button:hover {
+      background-color: #88C470; }
 
 /*# sourceMappingURL=main.css.map */

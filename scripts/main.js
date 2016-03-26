@@ -9,7 +9,7 @@ var aaron = new UserLogin('aaron@theironyard.com', 'password123');
 var admin = new UserLogin('admin@google.com', 'pandas');
 
 //Setting up the event listener that runs this entire page
-$('form').submit(function(e) {
+$('button').on('click', function(e) {
 	e.preventDefault;
 	//Creating the variables for the email input and password input
 	var emailAddress = $('.emailInput');
@@ -33,12 +33,7 @@ $('form').submit(function(e) {
 		console.log('It worked');
 		$('.emailError').html('');
 		$('.passwordError').html('');
-		//I cannot figure out how to link my page to another page using javascript. Things I have tried:
-		// window.location = 'https://theironyard.com';
-		// window.location.assign('https://theironyard.com');
-		// window.location.href = 'https://theironyard.com';
-		// window.location.replace('https://theironyard.com');
-		//Bottom line; the location object is almost entirely useless unless you're printing out what page you're already on.
+		window.location = 'http://theironyard.com';
 
 	}
 	//Setting up the if statement that determines if the admin can log in and what to do when it does
@@ -46,9 +41,6 @@ $('form').submit(function(e) {
 		console.log('It worked');
 		$('.emailError').html('');
 		$('.passwordError').html('');
-		// window.location = 'https://theironyard.com';
-		// window.location.assign('https://theironyard.com');
-		// window.location.href = 'https://theironyard.com';
-		// window.location.replace('https://theironyard.com');
+		window.location = 'http://theironyard.com';
 	}
 });
