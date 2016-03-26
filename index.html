@@ -11,11 +11,13 @@
 			</div>
 		</section>
 		<section class="bottom-half">
-			<div>
-				<div><input type="text" class="usernameInput" placeholder="Username"></input></div>
-				<div><input type="text" class="passwordInput" placeholder="Password"></input></div>
+			<form>
+				<div class="emailError"></div>
+				<input type="text" class="emailInput" placeholder="Email Addresss"></input>
+				<div class="passwordError"></div>
+				<input type="password" class="passwordInput" placeholder="Password"></input>
 				<button type="submit" class="loginBtn">Sign In</button>
-			</div>
+			</form>
 		</section>
 		<script type="text/javascript" src="scripts/node_modules/jquery/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="scripts/main.js"></script>

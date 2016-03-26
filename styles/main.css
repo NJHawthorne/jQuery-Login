@@ -1,7 +1,7 @@
 .top-half {
   background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-login/master/bg-login-top.png);
   background-size: fill;
-  padding-top: 10em; }
+  padding-top: 13em; }
   .top-half div {
     width: 25%;
     margin: 0 auto; }
@@ -9,15 +9,20 @@
 .bottom-half {
   background-image: url(https://raw.githubusercontent.com/TIY-Austin-Front-End-Engineering/jquery-login/master/bg-login.png);
   background-size: fill;
-  padding-bottom: 10em; }
-  .bottom-half div {
+  padding-bottom: 13em; }
+  .bottom-half form {
     width: 30.5%;
-    margin: 0 auto; }
-    .bottom-half div input {
+    margin: 0 auto;
+    color: red; }
+    .bottom-half form div {
+      padding-top: 0.5em;
+      margin-left: 6.25em; }
+    .bottom-half form input {
       border-radius: 0.5em;
-      padding: 1em 3.3em;
-      margin-top: 1em; }
-    .bottom-half div button {
+      padding: 1em 4em;
+      margin-top: 1em;
+      margin-left: 9em; }
+    .bottom-half form button {
       margin-top: 1em;
       margin-left: 20em;
       padding: 0.5em;
@@ -26,7 +31,6 @@
       color: white;
       font-weight: bold;
       font-size: 0.8em;
-      border-color: lime;
-      text-shadow: 0 -2px black; }
+      border-color: lime; }
 
 /*# sourceMappingURL=main.css.map */
