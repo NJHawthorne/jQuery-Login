@@ -8,95 +8,38 @@ function UserLogin (email, password) {
 var aaron = new UserLogin('aaron@theironyard.com', 'password123');
 var admin = new UserLogin('admin@google.com', 'pandas');
 
-function manageAaronEmail() {
-	if(!$('.emailInput').val() || !$('.emailInput').val().split('').includes('@')) {
-		$('.emailError').html('Please enter a valid email address');
-		return false;
-	} else if ($('.emailInput').val() === aaron.email) {
-		$('.emailError').html('');
-		return true;
-	} else {
-		$('.emailError').html('Your email address was not correct. Please try again');
-		return false;
-	}
-};
-
-function manageAdminEmail() {
-	if(!$('.emailInput').val() || !$('.emailInput').val().split('').includes('@')) {
-		$('.emailError').html('Please enter a valid email address');
-		return false;
-	} else if ($('.emailInput').val() === admin.email) {
-		$('.emailError').html('');
-		return true;
-	} else {
-		$('.emailError').html('Your email address was not correct. Please try again');
-		return false;
-	}
-};
-
-function manageAaronPassword() {
-	if(!$('.passwordInput').val()) {
-		$('.passwordError').html('Please enter a valid password');
-		return false;
-	} else if ($('.passwordInput').val() === aaron.password) {
-		$('.passwordError').html('');
-		return true;
-	} else {
-		$('.passwordError').html('Your password was not correct. Please try again');
-		return false;
-	}
-};
-
-function manageAdminPassword() {
-	if(!$('.passwordInput').val()) {
-		$('.passwordError').html('Please enter a valid password');
-		return false;
-	} else if ($('.passwordInput').val() === admin.password) {
-		$('.passwordError').html('');
-		return true;
-	} else {
-		$('.passwordError').html('Your password was not correct. Please try again');
-		return false;
-	}
-};
-
+//Setting up the event listener that runs this entire page
 $('form').submit(function(e) {
 	e.preventDefault;
-	var adminEmailTrue = manageAdminEmail();
-	var aaronEmailTrue = manageAaronEmail();
-	var adminPasswordTrue = manageAdminPassword();
-	var aaronPasswordTrue = manageAaronPassword();
+	//Creating the variables for the email input and password input
+	var emailAddress = $('.emailInput');
+	var password = $('.passwordInput');
+	console.log(emailAddress.val());
+	console.log(password.val());
+	console.log(emailAddress.val().split('').includes('@'));
 
-	if(adminPasswordTrue && adminEmailTrue) {
+	//Setting up the if statement that determines if any error messages should pop up for the email
+	if(!emailAddress.val().split('').includes('@') || !emailAddress.val()) {
+		$('.emailError').html('Please enter a valid email address.');
+	} else if (emailAddress.val() !== aaron.email && emailAddress.val() !== admin.email) {
+		$('.emailError').html('This email was not found. Please try again.');
+	}
+	//Setting up the if statement that determines if any error messages should pop up for the password
+	if(!password.val()) {
+		$('.passwordError').html('Please enter a valid password');
+	}
+	else if (password.val() !== aaron.password && password.val() !== admin.password) {
+		$('.passwordError').html('This password was incorrect. Please try again.');
+	}
+	//Setting up the if statement that determines if aaron can log in and what to do when he does
+	if(emailAddress.val() === aaron.email && password.val() === aaron.password) {
 		console.log('It worked');
+		//No clue why this doesn't work.
 		window.location = 'https://theironyard.com';
-	} else if (aaronEmailTrue && aaronPasswordTrue) {
+	}
+	//Setting up the if statement that determines if the admin can log in and what to do when it does
+	if (emailAddress.val() === admin.email && password.val() === admin.password) {
 		console.log('It worked');
 		window.location = 'https://theironyard.com';
 	}
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
