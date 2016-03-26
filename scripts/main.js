@@ -31,12 +31,24 @@ $('form').submit(function(e) {
 	//Setting up the if statement that determines if aaron can log in and what to do when he does
 	if(emailAddress.val() === aaron.email && password.val() === aaron.password) {
 		console.log('It worked');
-		//No clue why this doesn't work.
-		window.location.assign('https://theironyard.com');
+		$('.emailError').html('');
+		$('.passwordError').html('');
+		//I cannot figure out how to link my page to another page using javascript. Things I have tried:
+		// window.location = 'https://theironyard.com';
+		// window.location.assign('https://theironyard.com');
+		// window.location.href = 'https://theironyard.com';
+		// window.location.replace('https://theironyard.com');
+		//Bottom line; the location object is almost entirely useless unless you're printing out what page you're already on.
+
 	}
 	//Setting up the if statement that determines if the admin can log in and what to do when it does
 	if (emailAddress.val() === admin.email && password.val() === admin.password) {
 		console.log('It worked');
-		window.location.assign('https://theironyard.com');
+		$('.emailError').html('');
+		$('.passwordError').html('');
+		// window.location = 'https://theironyard.com';
+		// window.location.assign('https://theironyard.com');
+		// window.location.href = 'https://theironyard.com';
+		// window.location.replace('https://theironyard.com');
 	}
 });
