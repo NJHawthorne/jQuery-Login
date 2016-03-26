@@ -14,9 +14,6 @@ $('form').submit(function(e) {
 	//Creating the variables for the email input and password input
 	var emailAddress = $('.emailInput');
 	var password = $('.passwordInput');
-	console.log(emailAddress.val());
-	console.log(password.val());
-	console.log(emailAddress.val().split('').includes('@'));
 
 	//Setting up the if statement that determines if any error messages should pop up for the email
 	if(!emailAddress.val().split('').includes('@') || !emailAddress.val()) {
@@ -35,11 +32,11 @@ $('form').submit(function(e) {
 	if(emailAddress.val() === aaron.email && password.val() === aaron.password) {
 		console.log('It worked');
 		//No clue why this doesn't work.
-		window.location = 'https://theironyard.com';
+		window.location.assign('https://theironyard.com');
 	}
 	//Setting up the if statement that determines if the admin can log in and what to do when it does
 	if (emailAddress.val() === admin.email && password.val() === admin.password) {
 		console.log('It worked');
-		window.location = 'https://theironyard.com';
+		window.location.assign('https://theironyard.com');
 	}
 });
